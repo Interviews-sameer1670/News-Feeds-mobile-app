@@ -1,0 +1,6 @@
+"C:\Program Files\Java\jdk1.8.0_221\bin\keytool" -genkey -v -keystore myNewsFeed.keystore -alias myNewsFeed -keyalg RSA -keysize 2048 -validity 10000
+
+"C:\Program Files\Java\jdk1.8.0_221\bin\jarsigner" -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore myNewsFeed.keystore app-release-unsigned.apk myNewsFeed
+
+
+"C:\Users\username\AppData\Local\Android\Sdk\build-tools\29.0.2\zipalign" -v 4 app-release-unsigned.apk myNewsFeed.apk
