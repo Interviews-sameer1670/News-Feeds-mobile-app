@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" color="light">Trending</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText=""
+        refreshingSpinner="crescent"
+        refreshingText="">
+      </ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngFor="let article of fetchedNews?.articles" (click)="goToNewsDetail(article)" class="cardTheme">
+    <img [src]="article.urlToImage" />
+    <ion-card-header>
+      <ion-card-subtitle color="success">{{article.author}}</ion-card-subtitle>
+      <ion-card-title class="fontStyle">{{article.title}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

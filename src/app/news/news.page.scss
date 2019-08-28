@@ -1,0 +1,41 @@
+ion-content{
+    --ion-background-color: black;
+}
+ion-header{
+    --ion-toolbar-background: #383a3e;
+    --ion-font-family: "Century Old Style";
+}
+ion-refresher{
+    background: #383a3e;
+}
+.fontStyle{
+    font-family: "Century Old Style";
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 0.9em;
+}
+.cardTheme{
+    background-color: #383a3e;
+    border: 1px solid whitesmoke;
+}
+
+.imageStyle{
+    //height: 50px;
+    //width: 50px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+  
+.column {
+float: left;
+width: 50%;
+padding: 5px;
+}
+.card-content-md{
+    padding-left: unset;
+    padding-right: unset;
+}

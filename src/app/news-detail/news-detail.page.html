@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" color="light">News Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="cardTheme">
+      <img [src]="articleDetail.urlToImage" />
+      <ion-card-header>
+        <ion-card-subtitle color="success">{{articleDetail?.author}}</ion-card-subtitle>
+        <ion-card-title class="fontStyle">{{articleDetail.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="newsDetailFont">{{articleDetail.description}}</p>
+        <div class="ion-text-end" style="color:skyblue; padding: 2px;" (click)="goToNewsSource(articleDetail.url)">
+        <ion-icon name="open"></ion-icon>
+        <ion-label>view source</ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,20 @@
+    ion-tab-button.tab-selected {
+      ion-icon, ion-label {
+        color: #fff !important;
+        box-shadow: 2px #fff;
+        font-weight: bolder;
+        --ion-color-base: var(--ion-color-primary) !important;
+        z-index: 999;
+      }
+    }
+
+    ion-tab-button {
+        ion-icon, ion-label {
+          color: #808080 !important;
+          --ion-color-base: var(--ion-color-primary) !important;
+          box-shadow: 2px #808080;
+          z-index: 1;
+        }
+        background-color: black; 
+        border-top: 1px solid white;
+      }

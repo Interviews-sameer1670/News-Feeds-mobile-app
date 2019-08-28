@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" color="light">Featured News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" (ionPull)="hideSplashScreen($event)" (ionStart)="hideSplashScreen($event)">
+        <ion-refresher-content
+          class="refresher"
+          pullingIcon="arrow-dropdown"
+          pullingText=""
+          refreshingSpinner="crescent"
+          refreshingText="">
+        </ion-refresher-content>
+    </ion-refresher>
+  <ion-card *ngFor="let article of featuredArticles?.articles" (click)="goToNewsDetail(article)" class="cardTheme">
+    <ion-card-content>
+      <div class="row">
+        <div class="column">
+          <img [src]="article.urlToImage" class="imageStyle" />
+        </div>
+        <div class="column">
+          <ion-card-title class="fontStyle">{{article.title}}</ion-card-title>
+          <ion-card-subtitle color="success">{{article.author}}</ion-card-subtitle>
+        </div>
+        </div>
+      </ion-card-content>
+  </ion-card>
+
+</ion-content>
